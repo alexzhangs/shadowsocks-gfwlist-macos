@@ -18,6 +18,7 @@ pip install gfwlist2pac==1.1.3
 
 ## Installation
 git clone https://github.com/alexzhangs/shadowsocks-macos-gfwlist-update
+
 sudo sh ./shadowsocks-macos-gfwlist-update/install.sh
 
 ## Manually Update GFWList
