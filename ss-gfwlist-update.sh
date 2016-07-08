@@ -13,7 +13,7 @@ SS_CONFIG_DIR=~/.ShadowsocksX
 # Backup original PAC if not exist
 SS_PAC_BACKUP="$SS_CONFIG_DIR/gfwlist-backup-by-${0##*/}.js"
 if [[ ! -f $SS_PAC_BACKUP ]]; then
-    cp -a "$SS_CONFIG_DIR/gfwlist.js" "$SS_PAC_BACKUP"
+    /bin/cp -a "$SS_CONFIG_DIR/gfwlist.js" "$SS_PAC_BACKUP" || exit $?
 fi
 
 # Generate PAC

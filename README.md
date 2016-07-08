@@ -1,4 +1,4 @@
-# shadowsocks-macos-gfwlist-update
+# shadowsocks-gfwlist-macos
 Shadowsocks for OSX 2.6.3 has an issue of updating GFWList PAC, that
 returns error 404. The URL used during the update is hardcoded in the
 application and can not be changed easily.
@@ -17,14 +17,14 @@ OR
 pip install gfwlist2pac==1.1.3
 
 ## Installation
-git clone https://github.com/alexzhangs/shadowsocks-macos-gfwlist-update
+git clone https://github.com/alexzhangs/shadowsocks-gfwlist-macos
 
-sudo sh ./shadowsocks-macos-gfwlist-update/install.sh
+sudo sh ./shadowsocks-gfwlist-macos/install.sh
 
 ## Manually Update GFWList
-update-gfwlist.sh
+ss-gfwlist-update.sh
 
 ## Setup a cron job run hourly
 crontab -e
 
-0 * * * * /usr/local/bin/update-gfwlist.sh > /var/log/update-gfwlist-error.log 2>&1
+0 * * * * /usr/local/bin/ss-gfwlist-update.sh > /tmp/ss-gfwlist-update-error.log 2>&1
