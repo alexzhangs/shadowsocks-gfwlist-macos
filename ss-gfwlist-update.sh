@@ -18,10 +18,10 @@ usage () {
     printf "OPTIONS\n"
     printf "\t[-c]\n\n"
     printf "\tUse cached GFW list file.\n\n"
-    
+
     printf "\t[-p]\n\n"
     printf "\tProxy setting, default is: 'SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;'.\n\n"
-        
+
     printf "\t[-h]\n\n"
     printf "\tThis help.\n\n"
     exit 255
