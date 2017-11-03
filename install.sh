@@ -3,7 +3,7 @@
 dir=$(dirname "$0") || exit $?
 
 echo ">>Copying scripts to /usr/local/bin/"
-find "$dir" -type f -depth 1 -not -name $(basename "$0") -and \( -name "*.sh" -or -name "*.py" \) |\
+find "$dir" -maxdepth 1 -type f -not -name $(basename "$0") -and \( -name "*.sh" -or -name "*.py" \) |\
     while read f; do
         echo "  $f"
         fn=$(basename "$f") && \
